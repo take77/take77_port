@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     iconsBox: {
         margin: '3em 0',
     },
+    iconBox: {
+        textAlign: 'center',
+    },
     icon: {
         color: '#ffffff',
     }
@@ -20,16 +23,16 @@ const IconLinkBox = () => {
 
     return (
         <Grid container className={classes.iconsBox}>
-            <Grid xs={3}>
+            <Grid xs={3} className={classes.iconBox}>
                 <TwitterIcon fontSize="large" className={classes.icon} />
             </Grid>
-            <Grid xs={3}>
+            <Grid xs={3} className={classes.iconBox}>
                 <FacebookIcon fontSize="large" className={classes.icon} />
             </Grid>
-            <Grid xs={3}>
+            <Grid xs={3} className={classes.iconBox}>
                 <InsertDriveFileOutlinedIcon fontSize="large" className={classes.icon} />
             </Grid>
-            <Grid xs={3}>
+            <Grid xs={3} className={classes.iconBox}>
                 <GitHubIcon fontSize="large" className={classes.icon} />
             </Grid>
         </Grid>
