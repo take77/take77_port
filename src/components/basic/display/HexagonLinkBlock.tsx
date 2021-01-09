@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import Foo from '@/images/TestImage.jpg';
-
 type PropsType = {
     image:  any;
     name: string;

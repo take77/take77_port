@@ -13,8 +13,8 @@ import Contact from '@/images/Contact.jpg';
 const useStyles = makeStyles({
     linksBox: {
         position: 'relative',
-        height: '530px',
-        width: '477px',
+        height: '1018px',
+        width: '275px',
         margin: '0 auto'
     },
     linkBlockCommon: {
@@ -25,28 +25,28 @@ const useStyles = makeStyles({
         left: 0,
     },
     linkBlock_02: {
-        top: 0,
-        left: '198px',
-    },
-    linkBlock_03: {
         top: '162px',
         left: '99px',
     },
-    linkBlock_04: {
-        top: '162px',
-        left: '297px',
-    },
-    linkBlock_05: {
+    linkBlock_03: {
         top: '324px',
         left: 0,
     },
-    linkBlock_06: {
-        top: '324px',
-        left: '198px',
+    linkBlock_04: {
+        top: '486px',
+        left: '99px',
     },
-})
+    linkBlock_05: {
+        top: '648px',
+        left: 0,
+    },
+    linkBlock_06: {
+        top: '810px',
+        left: '99px',
+    },
+});
 
-const PCLinkBox = () => {
+const SPLinkBox = () => {
     const classes = useStyles();
 
     return (
@@ -70,7 +70,7 @@ const PCLinkBox = () => {
                 <HexagonLinkBlock image={Contact} name='Contact' />
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default PCLinkBox;
+export default SPLinkBox;
