@@ -52,22 +52,22 @@ const PCLinkBox = () => {
     return (
         <div className={classes.linksBox}>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_01}`}>
-                <HexagonLinkBlock image={Intro} name='Intro' />
+                <HexagonLinkBlock fileName='Intro.jpg' name='Intro' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_02}`}>
-                <HexagonLinkBlock image={Service} name='Service' />
+                <HexagonLinkBlock fileName='Service.jpg' name='Service' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_03}`}>
-                <HexagonLinkBlock image={Develop} name='Develop' />
+                <HexagonLinkBlock fileName='Develop.jpg' name='Develop' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_04}`}>
-                <HexagonLinkBlock image={Movie} name='Movie' />
+                <HexagonLinkBlock fileName='Movie.jpg' name='Movie' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_05}`}>
-                <HexagonLinkBlock image={Hobby} name='Hobby' />
+                <HexagonLinkBlock fileName='Hobby.jpg' name='Hobby' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_06}`}>
-                <HexagonLinkBlock image={Contact} name='Contact' />
+                <HexagonLinkBlock fileName='Contact.jpg' name='Contact' />
             </div>
         </div>
     );
