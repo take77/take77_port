@@ -1,11 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
 
-require('typeface-jost');
+import { makeStyles } from '@material-ui/core';
+import Typograpy from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
     title: {
-        fontFamily: '"jost", sans-serif',
+        fontSize: '1.5em',
+        fontWeight: 'bold',
         color: '#ffffff',
     }
 })
@@ -14,7 +15,7 @@ const TopTitle = () => {
     const classes = useStyles();
 
     return (
-        <h1 className={classes.title}>take77's port</h1>
+        <Typograpy variant='h1' className={classes.title}>take77's port</Typograpy>
     );
 }
 
