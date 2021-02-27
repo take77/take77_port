@@ -10,7 +10,7 @@ import Footer from '../section/common/Footer';
 
 const useSPStyles = makeStyles({
     mainContainer: {
-        background: 'linear-gradient(60deg, #2b5164, #613563)',
+        backgroundColor: '#2E2E30',
         position: 'relative',
     },
     footerStyles: {
@@ -22,7 +22,7 @@ const useSPStyles = makeStyles({
 const usePCStyles = makeStyles({
     mainContainer: {
         minHeight: '100vh',
-        background: 'linear-gradient(60deg, #2b5164, #613563)',
+        backgroundColor: '#2E2E30',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

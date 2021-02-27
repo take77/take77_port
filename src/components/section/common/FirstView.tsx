@@ -31,7 +31,6 @@ const useStyles = makeStyles({
     firstViewTitle: {
         position: 'absolute',
         fontSize: 'calc(2em + 5vw)',
-        color: '#ffffff',
         bottom: 'calc(-4.5vw - 36px)',
         right: 10,
     }

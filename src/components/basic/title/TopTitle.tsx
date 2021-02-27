@@ -7,7 +7,6 @@ const useStyles = makeStyles({
     title: {
         fontSize: '1.5em',
         fontWeight: 'bold',
-        color: '#ffffff',
     }
 })
 
