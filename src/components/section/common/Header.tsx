@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -10,6 +11,10 @@ const useStyles = makeStyles({
         backgroundColor: 'transparent',
         width: '100%'
     },
+    linkStyles: {
+        textDecoration: 'none',
+        color: '#ffffff',
+    },
 })
 
 const Header = () => {
@@ -18,7 +23,9 @@ const Header = () => {
     return (
         <AppBar position='static' className={classes.appBarStyles} elevation={0}>
             <Toolbar>
-                <Typography variant='h1'>take77's port</Typography>
+                <Link to='/' className={classes.linkStyles}>
+                    <Typography variant='h1'>take77's port</Typography>
+                </Link>
             </Toolbar>
         </AppBar>
     )
