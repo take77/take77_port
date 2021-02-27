@@ -30,6 +30,7 @@ let theme = createMuiTheme({
 
 theme.typography.h1 = {
     fontSize: '1.2rem',
+    color: '#ffffff',
     fontFamily: '"jost", "Sawarabi Gothic", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
@@ -41,6 +42,7 @@ theme.typography.h1 = {
 
 theme.typography.h2 = {
     fontSize: '1.3rem',
+    color: '#ffffff',
     fontFamily: '"jost", "Sawarabi Gothic", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
@@ -52,6 +54,7 @@ theme.typography.h2 = {
 
 theme.typography.h3 = {
     fontSize: '1.1rem',
+    color: '#ffffff',
     fontFamily: '"jost", "Sawarabi Gothic", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
@@ -64,6 +67,7 @@ theme.typography.h3 = {
 theme.typography.body1 = {
     lineHeight: 2,
     fontSize: 14,
+    color: '#2E2E30',
     fontFamily: '"jost", "Sawarabi Gothic", sans-serif',
     letterSpacing: '.2em',
     [theme.breakpoints.up('sm')]: {
@@ -77,6 +81,7 @@ theme.typography.body1 = {
 theme.typography.body2 = {
     lineHeight: 2,
     fontSize: 14,
+    color: '#C4C4CC',
     letterSpacing: '.2em',
     fontFamily: '"jost", "Sawarabi Gothic", sans-serif',
     [theme.breakpoints.up('sm')]: {

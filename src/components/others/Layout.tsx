@@ -13,13 +13,12 @@ import MenuDialog from '../section/common/MenuDrawer';
 
 type LayoutProps = {
     pathname: string;
-    children: any;
 }
 
 const useStyles = makeStyles({
     mainContainer: {
         minHeight: '100vh',
-        background: 'linear-gradient(60deg, #2b5164, #613563)',
+        backgroundColor: '#2E2E30',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
