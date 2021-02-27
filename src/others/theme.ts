@@ -1,6 +1,32 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-let theme = createMuiTheme()
+let theme = createMuiTheme({
+    palette: {
+        primary: {
+            light: '#ffffff',
+            main: '#fdfdfd',
+            dark: '#cacaca'
+        }
+    },
+    overrides: {
+        MuiFab: {
+            root: {
+                width: '52.2px',
+                height: '60px',
+                clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25% )',
+                borderRadius: 0,
+                boxShadow: '0px 6px 10px -2px rgb(0 0 0 / 20%), 0px 12px 20px 0px rgb(0 0 0 / 14%), 0px 2px 36px 0px rgb(0 0 0 / 12%)',
+            }
+        },
+        MuiSvgIcon: {
+            root: {
+                width: '1.2em',
+                height: '1.2em',
+                fontWeight: 300,
+            }
+        }
+    },
+})
 
 theme.typography.h1 = {
     fontSize: '1.2rem',
