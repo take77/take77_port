@@ -81,7 +81,7 @@ theme.typography.body1 = {
 theme.typography.body2 = {
     lineHeight: 2,
     fontSize: 14,
-    color: '#C4C4CC',
+    color: '#2E2E30',
     letterSpacing: '.2em',
     fontFamily: '"jost", "Sawarabi Gothic", sans-serif',
     [theme.breakpoints.up('sm')]: {
