@@ -3,9 +3,24 @@ import { createMuiTheme } from '@material-ui/core/styles';
 let theme = createMuiTheme({
     palette: {
         primary: {
-            light: '#ffffff',
-            main: '#fdfdfd',
-            dark: '#cacaca'
+            light: '#8bc4ff',
+            main: '#5694d1',
+            dark: '#1567a0'
+        },
+        secondary: {
+            light: '#ffa39b',
+            main: '#d1736d',
+            dark: '#9d4542'
+        },
+        success: {
+            light: '#8bc4ff',
+            main: '#5694d1',
+            dark: '#1567a0'
+        },
+        error: {
+            light: '#ffa39b',
+            main: '#d1736d',
+            dark: '#9d4542'
         }
     },
     overrides: {
@@ -24,7 +39,46 @@ let theme = createMuiTheme({
                 height: '1.2em',
                 fontWeight: 300,
             }
-        }
+        },
+        MuiFormLabel: {
+            root: {
+                color: '#c1c1c9'
+            }
+        },
+        MuiInputBase: {
+            root: {
+                color: '#fdfdfd'
+            }
+        },
+        MuiInput: {
+            underline: {
+                '&:before': {
+                    borderBottom: '1px solid rgba(193, 193, 201, .42)'
+                },
+                '&:hover': {
+                    borderBottom: '1px solid rgba(193, 193, 201, .42)'
+                },
+                '&:hover:not(.Mui-disabled):before': {
+                    borderBottom: '1px solid rgba(193, 193, 201, .87)'
+                }
+            }
+        },
+        MuiFormHelperText: {
+            root: {
+                marginTop: '6px',
+            }
+        },
+        MuiButton: {
+            root: {
+                borderRadius: 0,
+            },
+            contained: {
+                '&.Mui-disabled': {
+                    color: 'rgba(255, 255, 255, .26)',
+                    backgroundColor: 'rgba(21, 103, 160, .12)'
+                }
+            }
+        },
     },
 })
 
