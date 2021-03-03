@@ -1,3 +1,8 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+
 const path = require('path');
 
 module.exports = {
@@ -12,7 +17,15 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.DELIVERY_ACCESS_TOKEN,
+      }
+    }
   ],
 };

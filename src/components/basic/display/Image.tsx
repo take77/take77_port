@@ -16,7 +16,7 @@ const Image: React.FC<PropsType> = (props) => {
             relativePath
             name
             childImageSharp {
-              fluid(quality: 100) {
+              fluid {
                 ...GatsbyImageSharpFluid
               }
             }

@@ -14,7 +14,6 @@ type Props = {
 const useStyles = makeStyles({
     firstViewBox: {
         position: 'relative',
-        width: '100vw',
         maxWidth: '1280px',
         height: '25vh',
         margin: '0 auto',

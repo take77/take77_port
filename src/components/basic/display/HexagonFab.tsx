@@ -9,7 +9,7 @@ import MenuSharpIcon from '@material-ui/icons/MenuSharp'
 
 const useStyles = makeStyles({
     fabStyles: {
-        position: 'absolute',
+        position: 'fixed',
         right: 30,
         bottom: 30,
     }
