@@ -34,8 +34,6 @@ const FormField: React.FC<FormFieldProps> = (props) => {
 
     const handleChange = (value) => {
         setFieldState(value);
-        console.log(isCorrect);
-        console.log(value);
 
         if (name === 'email') {
             const regex = /^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$/;

@@ -51,8 +51,6 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
     const inSm = useMediaQuery('(max-width:600px)');
     const classes = useCommonStyles();
     const customClasses = inSm ? useSPStyles() : usePCStyles();
-    {/* @ts-ignore */}
-    const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
     return (
         <SwipeableDrawer
@@ -60,8 +58,6 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
             open={isOpen}
             onOpen={toggleDrawer(true, setIsOpen)}
             onClose={toggleDrawer(false, setIsOpen)}
-            disableBackdropTransition={!iOS}
-            disableDiscovery={iOS}
         >
             <List className={`${classes.listStyle} ${customClasses.listStyle}`}>
                 {pathname !== '/' &&
@@ -78,29 +74,29 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                         </ListItem>
                     </Link>
                 }
-                {pathname !== '/service' &&
-                    <Link to='/service' className={classes.linkStyle}>
+                {pathname !== '/services' &&
+                    <Link to='/services' className={classes.linkStyle}>
                         <ListItem button>
                             <ListItemText>Service</ListItemText>
                         </ListItem>
                     </Link>
                 }
-                {pathname !== '/develop' &&
-                    <Link to='/develop' className={classes.linkStyle}>
+                {pathname !== '/developments' &&
+                    <Link to='/developments' className={classes.linkStyle}>
                         <ListItem button>
                             <ListItemText>Develop</ListItemText>
                         </ListItem>
                     </Link>
                 }
-                {pathname !== '/video' &&
-                    <Link to='/video' className={classes.linkStyle}>
+                {pathname !== '/videos' &&
+                    <Link to='/videos' className={classes.linkStyle}>
                         <ListItem button>
                             <ListItemText>Video</ListItemText>
                         </ListItem>
                     </Link>
                 }
-                {pathname !== '/hobby' &&
-                    <Link to='/hobby' className={classes.linkStyle}>
+                {pathname !== '/hobbies' &&
+                    <Link to='/hobbies' className={classes.linkStyle}>
                         <ListItem button>
                             <ListItemText>Hobby</ListItemText>
                         </ListItem>

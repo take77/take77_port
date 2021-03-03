@@ -57,6 +57,7 @@ const Form = () => {
     }
 
     const classes = useStyles();
+    console.log(process.env.GOOGLE_FORM_EMAIL_ENTRY)
 
     return (
         <section className={classes.formBox}>
