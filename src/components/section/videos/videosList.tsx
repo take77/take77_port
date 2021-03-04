@@ -13,10 +13,10 @@ const useStyles = makeStyles({
     }
 })
 
-const HobbiesList = () => {
+const VideosList = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulHobbyPost(sort: {order: DESC, fields: createdAt}) {
+            allContentfulVideoPost(sort: {order: DESC, fields: createdAt}) {
                 edges {
                     node {
                         url
@@ -31,16 +31,16 @@ const HobbiesList = () => {
         }
     `);
 
-    const posts = data.allContentfulHobbyPost.edges;
+    const posts = data.allContentfulVideoPost.edges;
     const classes = useStyles();
 
     return (
         <section className={classes.hobbyListBox}>
             <Grid container alignItems='center'>
-                {posts.map(post => <PostsListItemCard post={post} pathname={'hobbies'} />)}
+                {posts.map(post => <PostsListItemCard post={post} pathname={'videos'} />)}
             </Grid>
         </section>
     )
 }
 
-export default HobbiesList;
+export default VideosList;

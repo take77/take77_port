@@ -7,16 +7,16 @@ import Grid from '@material-ui/core/Grid';
 import PostsListItemCard from '@/components/parts/PostsListItemCard';
 
 const useStyles = makeStyles({
-    hobbyListBox: {
+    developmentListBox: {
         margin: '1em auto',
         width: '90%'
     }
 })
 
-const HobbiesList = () => {
+const DevelopmentsList = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulHobbyPost(sort: {order: DESC, fields: createdAt}) {
+            allContentfulDevelopmentPost(sort: {order: DESC, fields: createdAt}) {
                 edges {
                     node {
                         url
@@ -31,16 +31,16 @@ const HobbiesList = () => {
         }
     `);
 
-    const posts = data.allContentfulHobbyPost.edges;
+    const posts = data.allContentfulDevelopmentPost.edges;
     const classes = useStyles();
 
     return (
-        <section className={classes.hobbyListBox}>
+        <section className={classes.developmentListBox}>
             <Grid container alignItems='center'>
-                {posts.map(post => <PostsListItemCard post={post} pathname={'hobbies'} />)}
+                {posts.map(post => <PostsListItemCard post={post} pathname={'developments'} />)}
             </Grid>
         </section>
     )
 }
 
-export default HobbiesList;
+export default DevelopmentsList;
