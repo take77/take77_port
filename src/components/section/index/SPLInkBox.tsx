@@ -54,7 +54,7 @@ const SPLinkBox = () => {
                 <HexagonLinkBlock fileName='Develop.jpg' name='Develop' linkTo='/developments' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_04}`}>
-                <HexagonLinkBlock fileName='Video.jpg' name='Video' linkTo='/videos' />
+                <HexagonLinkBlock fileName='Graphic.jpg' name='Graphic' linkTo='/graphics' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_05}`}>
                 <HexagonLinkBlock fileName='Hobby.jpg' name='Hobby' linkTo='/hobbies' />

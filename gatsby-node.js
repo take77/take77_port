@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
@@ -60,6 +60,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             content {
               raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
             }
           }
         }

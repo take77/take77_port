@@ -12,7 +12,18 @@ const useStyles = makeStyles({
         width: '75%',
         height: '100%',
     },
-})
+});
+
+const options = {
+    renderNode: {
+      [BLOCKS.EMBEDDED_ASSET]: node => (
+        <GatsbyImage
+            image={getImage(node.data.target)}
+            alt={ node.data.contentful_id }
+        />
+      )
+    },
+  }
 
 const ServicePostTemplate = ({ pageContext }) => {
     const { post } = pageContext;
@@ -28,7 +39,7 @@ const ServicePostTemplate = ({ pageContext }) => {
                 className={classes.eyeCatchStyles}
             />
             <p>create: {post.createdAt}</p>
-            {post.content && renderRichText(post.content)}
+            {post.content && renderRichText(post.content, options)}
         </Layout>
     )
 };
