@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
     query {
-      allContentfulServicePost(sort: {order: DESC, fields: createdAt}) {
+      allContentfulServicePost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -28,11 +28,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             content {
               raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
             }
           }
         }
       }
-      allContentfulDevelopmentPost(sort: {order: DESC, fields: createdAt}) {
+      allContentfulDevelopmentPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -44,11 +51,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             content {
               raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
             }
           }
         }
       }
-      allContentfulVideoPost(sort: {order: DESC, fields: createdAt}) {
+      allContentfulGraphicPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -60,11 +74,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             content {
               raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
             }
           }
         }
       }
-      allContentfulHobbyPost(sort: {order: DESC, fields: createdAt}) {
+      allContentfulHobbyPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -76,6 +97,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             content {
               raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
             }
           }
         }
@@ -111,9 +139,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  result.data.allContentfulVideoPost.edges.forEach(({ node }) => {
+  result.data.allContentfulGraphicPost.edges.forEach(({ node }) => {
     createPage({
-      path: `/videos/${node.url}`,
+      path: `/graphics/${node.url}`,
       component: CommonPostTemplate,
       context: {
         post: node,

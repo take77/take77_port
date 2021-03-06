@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 const ServicesList = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulServicePost(sort: {order: DESC, fields: createdAt}) {
+            allContentfulServicePost(filter: {url: {ne: "dummy"}},sort: {order: DESC, fields: createdAt}) {
                 edges {
                     node {
                         url

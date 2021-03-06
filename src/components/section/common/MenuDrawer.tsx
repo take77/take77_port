@@ -88,10 +88,10 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                         </ListItem>
                     </Link>
                 }
-                {pathname !== '/videos' &&
-                    <Link to='/videos' className={classes.linkStyle}>
+                {pathname !== '/graphics' &&
+                    <Link to='/graphics' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Video</ListItemText>
+                            <ListItemText>Graphic</ListItemText>
                         </ListItem>
                     </Link>
                 }

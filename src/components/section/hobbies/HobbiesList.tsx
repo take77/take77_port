@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 const HobbiesList = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulHobbyPost(sort: {order: DESC, fields: createdAt}) {
+            allContentfulHobbyPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
                 edges {
                     node {
                         url

@@ -3,13 +3,13 @@ import { PageProps } from 'gatsby';
 
 import Layout from '@/components/others/Layout';
 import FirstView from '@/components/section/common/FirstView';
-import VideosList from '@/components/section/videos/videosList';
+import GraphicsList from '@/components/section/graphics/graphicsList';
 
 const Video: React.FC<PageProps> = ({location}) => {
     return (
         <Layout pathname={location.pathname}>
-            <FirstView fileName='Video.jpg' alt='Video' title='Video' />
-            <VideosList />
+            <FirstView fileName='Graphic.jpg' alt='Graphic' title='Graphic' />
+            <GraphicsList />
         </Layout>
     )
 };
