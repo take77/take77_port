@@ -29,6 +29,7 @@
     "@contentful/rich-text-types": "^14.1.2",
     "@fontsource/jost": "^4.1.1",
     "@fontsource/sawarabi-gothic": "^4.1.0",
+    "@fontsource/stick": "^4.2.2",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "dotenv": "^8.2.0",

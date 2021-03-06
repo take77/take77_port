@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
     query {
-      allContentfulServicePost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
+      allContentfulGraphicPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -31,8 +31,49 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               references {
                 ... on ContentfulAsset {
                   contentful_id
-                  gatsbyImageData
                   __typename
+                  title
+                  gatsbyImageData
+                }
+                ... on ContentfulHobbyPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulDevelopmentPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulGraphicPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulServicePost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
                 }
               }
             }
@@ -54,15 +95,56 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               references {
                 ... on ContentfulAsset {
                   contentful_id
-                  gatsbyImageData
                   __typename
+                  title
+                  gatsbyImageData
+                }
+                ... on ContentfulHobbyPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulDevelopmentPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulGraphicPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulServicePost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
                 }
               }
             }
           }
         }
       }
-      allContentfulGraphicPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
+      allContentfulServicePost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -77,8 +159,49 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               references {
                 ... on ContentfulAsset {
                   contentful_id
-                  gatsbyImageData
                   __typename
+                  title
+                  gatsbyImageData
+                }
+                ... on ContentfulHobbyPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulDevelopmentPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulGraphicPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulServicePost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
                 }
               }
             }
@@ -100,8 +223,49 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               references {
                 ... on ContentfulAsset {
                   contentful_id
-                  gatsbyImageData
                   __typename
+                  title
+                  gatsbyImageData
+                }
+                ... on ContentfulHobbyPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulDevelopmentPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulGraphicPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulServicePost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
                 }
               }
             }
