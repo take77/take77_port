@@ -19,9 +19,24 @@ const options = {
       [BLOCKS.EMBEDDED_ASSET]: node => (
         <GatsbyImage
             image={getImage(node.data.target)}
-            alt={ node.data.contentful_id }
+            alt={ node.data.title }
         />
-      )
+      ),
+      [BLOCKS.EMBEDDED_ENTRY]: node => {
+          console.log(node)
+          return (
+            <div>
+                <p>title: {node.data.target.title}</p>
+                <p>description: {node.data.target.description}</p>
+                <GatsbyImage
+                    image={getImage(node.data.target.eyeCatch)}
+                    alt={`${node.data.target.title} eye catch`}
+                />
+                <p>url: {node.data.target.url}</p>
+                <p>typename: {node.data.target.__typename}</p>
+            </div>
+          )
+        }
     },
   }
 
