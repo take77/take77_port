@@ -16,39 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
     query {
-      allContentfulServicePost(sort: {order: DESC, fields: createdAt}) {
-        edges {
-          node {
-            url
-            title
-            createdAt(formatString: "YYYY/MM/DD")
-            description
-            eyeCatch {
-              gatsbyImageData
-            }
-            content {
-              raw
-            }
-          }
-        }
-      }
-      allContentfulDevelopmentPost(sort: {order: DESC, fields: createdAt}) {
-        edges {
-          node {
-            url
-            title
-            createdAt(formatString: "YYYY/MM/DD")
-            description
-            eyeCatch {
-              gatsbyImageData
-            }
-            content {
-              raw
-            }
-          }
-        }
-      }
-      allContentfulVideoPost(sort: {order: DESC, fields: createdAt}) {
+      allContentfulServicePost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -71,7 +39,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      allContentfulHobbyPost(sort: {order: DESC, fields: createdAt}) {
+      allContentfulDevelopmentPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
         edges {
           node {
             url
@@ -83,6 +51,59 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             content {
               raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
+            }
+          }
+        }
+      }
+      allContentfulGraphicPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
+        edges {
+          node {
+            url
+            title
+            createdAt(formatString: "YYYY/MM/DD")
+            description
+            eyeCatch {
+              gatsbyImageData
+            }
+            content {
+              raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
+            }
+          }
+        }
+      }
+      allContentfulHobbyPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
+        edges {
+          node {
+            url
+            title
+            createdAt(formatString: "YYYY/MM/DD")
+            description
+            eyeCatch {
+              gatsbyImageData
+            }
+            content {
+              raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  gatsbyImageData
+                  __typename
+                }
+              }
             }
           }
         }
@@ -118,9 +139,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
 
-  result.data.allContentfulVideoPost.edges.forEach(({ node }) => {
+  result.data.allContentfulGraphicPost.edges.forEach(({ node }) => {
     createPage({
-      path: `/videos/${node.url}`,
+      path: `/graphics/${node.url}`,
       component: CommonPostTemplate,
       context: {
         post: node,

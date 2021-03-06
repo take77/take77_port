@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 const VideosList = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulVideoPost(sort: {order: DESC, fields: createdAt}) {
+            allContentfulGraphicPost(filter: {url: {ne: "dummy"}},sort: {order: DESC, fields: createdAt}) {
                 edges {
                     node {
                         url
@@ -31,13 +31,13 @@ const VideosList = () => {
         }
     `);
 
-    const posts = data.allContentfulVideoPost.edges;
+    const posts = data.allContentfulGraphicPost.edges;
     const classes = useStyles();
 
     return (
         <section className={classes.hobbyListBox}>
             <Grid container alignItems='center'>
-                {posts.map(post => <PostsListItemCard post={post} pathname={'videos'} />)}
+                {posts.map(post => <PostsListItemCard post={post} pathname={'graphics'} />)}
             </Grid>
         </section>
     )

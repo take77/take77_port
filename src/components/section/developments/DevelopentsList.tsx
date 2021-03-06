@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 const DevelopmentsList = () => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulDevelopmentPost(sort: {order: DESC, fields: createdAt}) {
+            allContentfulDevelopmentPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
                 edges {
                     node {
                         url

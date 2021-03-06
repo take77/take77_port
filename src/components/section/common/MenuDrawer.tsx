@@ -91,7 +91,7 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                 {pathname !== '/graphics' &&
                     <Link to='/graphics' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Video</ListItemText>
+                            <ListItemText>Graphic</ListItemText>
                         </ListItem>
                     </Link>
                 }
