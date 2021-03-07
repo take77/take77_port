@@ -5,7 +5,6 @@ import Typograpy from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
     title: {
-        fontSize: '1.5em',
         fontWeight: 'bold',
     }
 })

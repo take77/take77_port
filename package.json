@@ -28,6 +28,7 @@
   "dependencies": {
     "@contentful/rich-text-types": "^14.1.2",
     "@fontsource/jost": "^4.1.1",
+    "@fontsource/roboto-mono": "^4.2.2",
     "@fontsource/sawarabi-gothic": "^4.1.0",
     "@fontsource/stick": "^4.2.2",
     "@material-ui/icons": "^4.11.2",
