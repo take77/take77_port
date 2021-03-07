@@ -83,6 +83,21 @@ let theme = createMuiTheme({
 })
 
 theme.typography.h1 = {
+    fontSize: '1.5em',
+    color: '#ffffff',
+    fontFamily: '"jost", "Stick", sans-serif',
+    fontWeight: 300,
+    letterSpacing: '.3em',
+    lineHeight: 2,
+    [theme.breakpoints.up('sm')]: {
+        fontSize: '1.8em'
+    },
+    [theme.breakpoints.up('md')]: {
+        fontSize: '2em'
+    }
+}
+
+theme.typography.h2 = {
     fontSize: '1.2rem',
     color: '#ffffff',
     fontFamily: '"jost", "Stick", sans-serif',
@@ -90,19 +105,10 @@ theme.typography.h1 = {
     letterSpacing: '.3em',
     lineHeight: 2,
     [theme.breakpoints.up('sm')]: {
-        fontSize: '1.3rem'
-    }
-}
-
-theme.typography.h2 = {
-    fontSize: '1.3rem',
-    color: '#ffffff',
-    fontFamily: '"jost", "Stick", sans-serif',
-    fontWeight: 300,
-    letterSpacing: '.3em',
-    lineHeight: 2,
-    [theme.breakpoints.up('sm')]: {
-        fontSize: '1.4rem'
+        fontSize: '1.5em'
+    },
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.8em'
     }
 }
 
@@ -114,35 +120,53 @@ theme.typography.h3 = {
     letterSpacing: '.3em',
     lineHeight: 2,
     [theme.breakpoints.up('sm')]: {
-        fontSize: '1.2rem'
+        fontSize: '1.3em'
+    },
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.5em'
+    }
+}
+
+theme.typography.h4 = {
+    fontSize: '1rem',
+    color: '#ffffff',
+    fontFamily: '"jost", "Stick", sans-serif',
+    fontWeight: 300,
+    letterSpacing: '.3em',
+    lineHeight: 2,
+    [theme.breakpoints.up('sm')]: {
+        fontSize: '1.15em'
+    },
+    [theme.breakpoints.up('md')]: {
+        fontSize: '1.3em'
     }
 }
 
 theme.typography.body1 = {
-    lineHeight: 2,
-    fontSize: 14,
-    color: '#2E2E30',
+    lineHeight: 2.4,
+    fontSize: 16,
+    color: '#ffffff',
     fontFamily: '"jost", "Stick", sans-serif',
     letterSpacing: '.2em',
     [theme.breakpoints.up('sm')]: {
-        fontSize: 16
+        fontSize: 18
     },
     [theme.breakpoints.up('md')]: {
-        fontSize: 18
+        fontSize: 20
     }
 }
 
 theme.typography.body2 = {
     lineHeight: 2,
-    fontSize: 14,
-    color: '#2E2E30',
+    fontSize: 16,
+    color: '#ffffff',
     letterSpacing: '.2em',
     fontFamily: '"jost", "Stick", sans-serif',
     [theme.breakpoints.up('sm')]: {
-        fontSize: 16
+        fontSize: 18
     },
     [theme.breakpoints.up('md')]: {
-        fontSize: 18
+        fontSize: 20
     },
 }
 
