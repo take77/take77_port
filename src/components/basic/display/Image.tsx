@@ -1,6 +1,6 @@
 import React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 type PropsType = {
   fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Intro.jpg' | 'Graphic.jpg' | 'Service.jpg';
@@ -16,9 +16,7 @@ const Image: React.FC<PropsType> = (props) => {
             relativePath
             name
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData
             }
           }
         }
@@ -26,13 +24,10 @@ const Image: React.FC<PropsType> = (props) => {
 
     const image = data.images.nodes.find(n => n.relativePath.includes(props.fileName))
 
-    return <Img
-      fluid={image.childImageSharp.fluid}
+    return <GatsbyImage
+      image={getImage(image)}
+      alt={props.alt}
       className={props.styles}
-      imgStyle={{
-        objectFit: "cover",
-        objectPosition: "50% 50%",
-      }}
       />
   }
 
