@@ -32,6 +32,9 @@ const useCommonStyles = makeStyles({
     listStyle: {
         padding: '1em'
     },
+    listTextStyles: {
+        color: '#2E2E30'
+    },
 });
 
 const useSPStyles = makeStyles({
@@ -63,49 +66,49 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                 {pathname !== '/' &&
                     <Link to='/' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>TOP</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>TOP</ListItemText>
                         </ListItem>
                     </Link>
                 }
                 {pathname !== '/intro' &&
                     <Link to='/intro' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Intro</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Intro</ListItemText>
                         </ListItem>
                     </Link>
                 }
                 {pathname !== '/services' &&
                     <Link to='/services' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Service</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Service</ListItemText>
                         </ListItem>
                     </Link>
                 }
                 {pathname !== '/developments' &&
                     <Link to='/developments' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Develop</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Develop</ListItemText>
                         </ListItem>
                     </Link>
                 }
                 {pathname !== '/graphics' &&
                     <Link to='/graphics' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Graphic</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Graphic</ListItemText>
                         </ListItem>
                     </Link>
                 }
                 {pathname !== '/hobbies' &&
                     <Link to='/hobbies' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Hobby</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Hobby</ListItemText>
                         </ListItem>
                     </Link>
                 }
                 {pathname !== '/contact' &&
                     <Link to='/contact' className={classes.linkStyle}>
                         <ListItem button>
-                            <ListItemText>Contact</ListItemText>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Contact</ListItemText>
                         </ListItem>
                     </Link>
                 }

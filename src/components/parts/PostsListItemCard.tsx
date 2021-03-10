@@ -10,13 +10,18 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
+import contentOmit from '@/others/ommitted';
+
 const useStyles = makeStyles({
     cardStyles: {
         borderRadius: 0,
     },
     cardMediaStyles: {
         width: '100%',
-    }
+    },
+    cardContents: {
+        color: '#2E2E30'
+    },
 })
 
 const PostsListItemCard = ({ post, pathname }) => {
@@ -32,8 +37,8 @@ const PostsListItemCard = ({ post, pathname }) => {
                         <GatsbyImage image={eyeCatch} alt={`${post.node.title} eyeCatch`} className={classes.cardMediaStyles} />
                     </CardMedia>
                     <CardContent>
-                        <Typography>{ post.node.title }</Typography>
-                        <Typography>{ post.node.description }</Typography>
+                        <Typography className={classes.cardContents} variant='h3'>{ contentOmit(post.node.title, 10) }</Typography>
+                        <Typography className={classes.cardContents}>{ contentOmit(post.node.description, 36) }</Typography>
                     </CardContent>
                 </CardActionArea>
             </Card>
