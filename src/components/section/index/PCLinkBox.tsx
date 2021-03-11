@@ -45,19 +45,19 @@ const PCLinkBox = () => {
     return (
         <div className={classes.linksBox}>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_01}`}>
-                <HexagonLinkBlock fileName='Intro.jpg' name='Intro' linkTo='/intro' />
-            </div>
-            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_02}`}>
                 <HexagonLinkBlock fileName='Service.jpg' name='Service' linkTo='/services' />
             </div>
-            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_03}`}>
+            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_02}`}>
                 <HexagonLinkBlock fileName='Develop.jpg' name='Develop' linkTo='/developments' />
             </div>
-            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_04}`}>
+            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_03}`}>
                 <HexagonLinkBlock fileName='Graphic.jpg' name='Graphic' linkTo='/graphics' />
             </div>
-            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_05}`}>
+            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_04}`}>
                 <HexagonLinkBlock fileName='Hobby.jpg' name='Hobby' linkTo='/hobbies' />
+            </div>
+            <div className={`${classes.linkBlockCommon} ${classes.linkBlock_05}`}>
+                <HexagonLinkBlock fileName='Other.jpg' name='Other' linkTo='/others' />
             </div>
             <div className={`${classes.linkBlockCommon} ${classes.linkBlock_06}`}>
                 <HexagonLinkBlock fileName='Contact.jpg' name='Contact' linkTo='/contact' />

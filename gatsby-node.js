@@ -75,6 +75,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     gatsbyImageData
                   }
                 }
+                ... on ContentfulOtherPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
               }
             }
           }
@@ -130,6 +140,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
                 ... on ContentfulServicePost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulOtherPost {
                   contentful_id
                   __typename
                   url
@@ -203,6 +223,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     gatsbyImageData
                   }
                 }
+                ... on ContentfulOtherPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
               }
             }
           }
@@ -267,6 +297,90 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     gatsbyImageData
                   }
                 }
+                ... on ContentfulOtherPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      allContentfulOtherPost(filter: {url: {ne: "dummy"}}, sort: {order: DESC, fields: createdAt}) {
+        edges {
+          node {
+            url
+            title
+            createdAt(formatString: "YYYY/MM/DD")
+            description
+            eyeCatch {
+              gatsbyImageData
+            }
+            content {
+              raw
+              references {
+                ... on ContentfulAsset {
+                  contentful_id
+                  __typename
+                  title
+                  gatsbyImageData
+                }
+                ... on ContentfulHobbyPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulDevelopmentPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulGraphicPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulServicePost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
+                ... on ContentfulOtherPost {
+                  contentful_id
+                  __typename
+                  url
+                  title
+                  description
+                  eyeCatch {
+                    gatsbyImageData
+                  }
+                }
               }
             }
           }
@@ -316,6 +430,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allContentfulHobbyPost.edges.forEach(({ node }) => {
     createPage({
       path: `/hobbies/${node.url}`,
+      component: CommonPostTemplate,
+      context: {
+        post: node,
+      }
+    });
+  });
+
+  result.data.allContentfulOtherPost.edges.forEach(({ node }) => {
+    createPage({
+      path: `/others/${node.url}`,
       component: CommonPostTemplate,
       context: {
         post: node,

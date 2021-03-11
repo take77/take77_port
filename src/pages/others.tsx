@@ -3,13 +3,15 @@ import { PageProps } from 'gatsby';
 
 import Layout from '@/components/others/Layout';
 import FirstView from '@/components/section/common/FirstView';
+import OthersList from '@/components/section/others/OthersList';
 
-const Intro: React.FC<PageProps> = ({location}) => {
+const Others: React.FC<PageProps> = ({location}) => {
     return (
         <Layout pathname={location.pathname}>
-            <FirstView fileName='Intro.jpg' alt='Intro' title='Intro' />
+            <FirstView fileName='Other.jpg' alt='Other' title='Other' />
+            <OthersList />
         </Layout>
     )
 };
 
-export default Intro;
+export default Others;

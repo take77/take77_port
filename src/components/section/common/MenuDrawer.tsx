@@ -70,13 +70,6 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                         </ListItem>
                     </Link>
                 }
-                {pathname !== '/intro' &&
-                    <Link to='/intro' className={classes.linkStyle}>
-                        <ListItem button>
-                            <ListItemText classes={{primary: classes.listTextStyles}}>Intro</ListItemText>
-                        </ListItem>
-                    </Link>
-                }
                 {pathname !== '/services' &&
                     <Link to='/services' className={classes.linkStyle}>
                         <ListItem button>
@@ -102,6 +95,13 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                     <Link to='/hobbies' className={classes.linkStyle}>
                         <ListItem button>
                             <ListItemText classes={{primary: classes.listTextStyles}}>Hobby</ListItemText>
+                        </ListItem>
+                    </Link>
+                }
+                {pathname !== '/others' &&
+                    <Link to='/others' className={classes.linkStyle}>
+                        <ListItem button>
+                            <ListItemText classes={{primary: classes.listTextStyles}}>Other</ListItemText>
                         </ListItem>
                     </Link>
                 }
