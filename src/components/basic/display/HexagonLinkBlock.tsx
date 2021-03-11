@@ -7,9 +7,9 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Image from './Image';
 
 type PropsType = {
-    fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Intro.jpg' | 'Graphic.jpg' | 'Service.jpg';
-    name: 'Contact' | 'Develop' | 'Hobby' | 'Intro' | 'Graphic' | 'Service';
-    linkTo: '/contact' | '/developments' | '/hobbies' | '/intro' | '/graphics' | '/services';
+    fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Graphic.jpg' | 'Service.jpg'| 'Other.jpg';
+    name: 'Contact' | 'Develop' | 'Hobby' | 'Graphic' | 'Service'| 'Other';
+    linkTo: '/contact' | '/developments' | '/hobbies' | '/graphics' | '/services' | '/others';
 }
 
 const useStyles = makeStyles({

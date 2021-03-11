@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     },
     cardMediaStyles: {
         width: '100%',
+        height: '24vh'
     },
     cardContents: {
         color: '#2E2E30'

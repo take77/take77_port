@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Image from '../../basic/display/Image';
 
 type Props = {
-    fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Intro.jpg' | 'Graphic.jpg' | 'Service.jpg';
+    fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Graphic.jpg' | 'Service.jpg' | 'Other.jpg';
     alt: string;
     title: string;
 }
