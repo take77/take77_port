@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles({
     codeBoxStyle: {
         margin: '.5em auto',
-        backgroundColor: '#3e3e3e',
+        backgroundColor: '#211829',
         border: '1px solid #fdfdfd',
         padding: '.5em 1.5em',
         borderRadius: '1em'
