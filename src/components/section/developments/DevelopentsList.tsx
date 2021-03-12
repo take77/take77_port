@@ -9,7 +9,7 @@ import PostsListItemCard from '@/components/parts/PostsListItemCard';
 const useStyles = makeStyles({
     developmentListBox: {
         margin: '1em auto',
-        width: '90%'
+        width: '90%',
     }
 })
 
@@ -36,7 +36,7 @@ const DevelopmentsList = () => {
 
     return (
         <section className={classes.developmentListBox}>
-            <Grid container alignItems='center'>
+            <Grid container>
                 {posts.map(post => <PostsListItemCard post={post} pathname={'developments'} />)}
             </Grid>
         </section>

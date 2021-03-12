@@ -1,10 +1,10 @@
 import React from 'react';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
-import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
-import { makeStyles, useMediaQuery } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 import Layout from '@/components/others/Layout';
@@ -66,7 +66,6 @@ const options = {
 const CommonPostTemplate = ({ pageContext }) => {
     const { post } = pageContext;
     const eyeCatch = getImage(post.eyeCatch);
-    const inXs = useMediaQuery('(max-width: 600px)');
     const classes = useStyles();
 
     return (

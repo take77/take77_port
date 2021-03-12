@@ -25,7 +25,7 @@ const useStyles = makeStyles({
             content: (props: PropsType) => `"${props.name}"`,
             top: 0,
             left: 0,
-            background: 'rgba(255, 255, 255, .4)',
+            background: 'linear-gradient(135deg, rgba(54,39,66,.4) 0%, rgba(33,24,41,.4) 100%)',
             width: '100%',
             height: '100%',
             color: '#ffffff',
@@ -46,7 +46,7 @@ const useSPStyles = makeStyles({
     imageClipPath: {
         '&::after': {
             opacity: 1,
-            background: 'rgba(0, 0, 0, .4)',
+            background: 'linear-gradient(135deg, rgba(54,39,66,.4) 0%, rgba(33,24,41,.4) 100%)',
         }
     }
 });
@@ -55,7 +55,7 @@ const usePCStyles = makeStyles({
     imageClipPath: {
         '&::after': {
             opacity: 0,
-            background: 'rgba(0, 0, 0, .7)',
+            background: 'linear-gradient(135deg, rgba(54,39,66,.4) 0%, rgba(33,24,41,.4) 100%)',
         },
         '&:hover::after': {
             opacity: 1,

@@ -3,24 +3,24 @@ import { createMuiTheme } from '@material-ui/core/styles';
 let theme = createMuiTheme({
     palette: {
         primary: {
-            light: '#8bc4ff',
-            main: '#5694d1',
-            dark: '#1567a0'
+            light: '#ffffff',
+            main: '#d4d4d4',
+            dark: '#a3a3a3'
         },
         secondary: {
-            light: '#ffa39b',
-            main: '#d1736d',
-            dark: '#9d4542'
+            light: '#90e1ad',
+            main: '#5faf7e',
+            dark: '#2e7f51'
         },
         success: {
-            light: '#8bc4ff',
-            main: '#5694d1',
-            dark: '#1567a0'
+            light: '#ffffff',
+            main: '#d4d4d4',
+            dark: '#a3a3a3'
         },
         error: {
-            light: '#ffa39b',
-            main: '#d1736d',
-            dark: '#9d4542'
+            light: '#90e1ad',
+            main: '#5faf7e',
+            dark: '#2e7f51'
         }
     },
     overrides: {
@@ -75,7 +75,7 @@ let theme = createMuiTheme({
             contained: {
                 '&.Mui-disabled': {
                     color: 'rgba(255, 255, 255, .26)',
-                    backgroundColor: 'rgba(21, 103, 160, .12)'
+                    backgroundColor: 'rgba(212, 212, 212, .12)'
                 }
             }
         },
