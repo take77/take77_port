@@ -39,11 +39,11 @@ const Form = () => {
         setBackDropStatus(true);
         const submitParams = new FormData();
 
-        submitParams.append(process.env.GOOGLE_FORM_EMAIL_ENTRY, email);
-        submitParams.append(process.env.GOOGLE_FORM_SUBJECT_ENTRY, subject);
-        submitParams.append(process.env.GOOGLE_FORM_CONTENT_ENTRY, content);
+        submitParams.append(process.env.GATSBY_GOOGLE_FORM_EMAIL_ENTRY, email);
+        submitParams.append(process.env.GATSBY_GOOGLE_FORM_SUBJECT_ENTRY, subject);
+        submitParams.append(process.env.GATSBY_GOOGLE_FORM_CONTENT_ENTRY, content);
 
-        Axios.post(process.env.CORS_PROXY + process.env.GOOGLE_FORM_ACTION, submitParams).then(response => {
+        Axios.post(process.env.GATSBY_CORS_PROXY + process.env.GATSBY_GOOGLE_FORM_ACTION, submitParams).then(response => {
             console.log(response);
             setErrorIsOpen(false);
             setSuccessIsOpen(true);
