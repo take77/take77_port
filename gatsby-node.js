@@ -25,6 +25,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description
             eyeCatch {
               gatsbyImageData
+              file {
+                url
+              }
             }
             content {
               raw
@@ -99,6 +102,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description
             eyeCatch {
               gatsbyImageData
+              file {
+                url
+              }
             }
             content {
               raw
@@ -173,6 +179,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description
             eyeCatch {
               gatsbyImageData
+              file {
+                url
+              }
             }
             content {
               raw
@@ -247,6 +256,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description
             eyeCatch {
               gatsbyImageData
+              file {
+                url
+              }
             }
             content {
               raw
@@ -321,6 +333,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description
             eyeCatch {
               gatsbyImageData
+              file {
+                url
+              }
             }
             content {
               raw

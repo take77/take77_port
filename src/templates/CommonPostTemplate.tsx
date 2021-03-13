@@ -18,6 +18,7 @@ import CommonTemplateUl from '@/components/basic/list/CommonTemplateUl';
 import CommonTemplateOl from '@/components/basic/list/CommonTemplateOl';
 import CommonEntryCard from '@/components/parts/CommonEntryCard';
 import CommonArticleInfo from '@/components/parts/CommonArticleInfo';
+import Meta from '@/components/section/common/Meta';
 
 const useStyles = makeStyles({
     eyeCatchStyles: {
@@ -67,9 +68,16 @@ const CommonPostTemplate = ({ pageContext }) => {
     const { post } = pageContext;
     const eyeCatch = getImage(post.eyeCatch);
     const classes = useStyles();
+    console.log(post)
 
     return (
         <Layout pathname=''>
+            <Meta
+                title={post.title}
+                description={post.description}
+                OgImage={post.eyeCatch.file.url}
+                post
+            />
             <article>
                 <GatsbyImage
                     image={eyeCatch}

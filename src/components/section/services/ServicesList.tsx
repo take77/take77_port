@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 
 import PostsListItemCard from '@/components/parts/PostsListItemCard';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     serviceListBox: {
@@ -37,7 +38,13 @@ const ServicesList = () => {
     return (
         <section className={classes.serviceListBox}>
             <Grid container>
-                {posts.map(post => <PostsListItemCard post={post} pathname={'services'} />)}
+                {
+                    posts.length ?
+                        posts.map(post =>
+                            <PostsListItemCard post={post} pathname={'services'} />
+                        ) :
+                        <Typography>このカテゴリーにはまだ投稿がありません。</Typography>
+                }
             </Grid>
         </section>
     )

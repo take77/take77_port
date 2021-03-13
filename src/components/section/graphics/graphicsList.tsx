@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { makeStyles } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 
 import PostsListItemCard from '@/components/parts/PostsListItemCard';
 
@@ -37,7 +39,13 @@ const VideosList = () => {
     return (
         <section className={classes.hobbyListBox}>
             <Grid container>
-                {posts.map(post => <PostsListItemCard post={post} pathname={'graphics'} />)}
+                {
+                    posts.length ?
+                        posts.map(post =>
+                            <PostsListItemCard post={post} pathname={'graphics'} />
+                        ) :
+                        <Typography>このカテゴリーにはまだ投稿がありません。</Typography>
+                }
             </Grid>
         </section>
     )

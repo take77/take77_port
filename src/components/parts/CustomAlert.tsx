@@ -9,7 +9,7 @@ import CloseIcon from '@material-ui/icons/Close';
 
 type CustomAlertProps = {
     status: 'error' | 'success';
-    title: string;
+    title: Array<String>;
     isOpen: boolean;
     setIsOpen: (update?: React.SetStateAction<boolean>) => void | Promise<void>;
 }
@@ -26,14 +26,19 @@ const useStyles = makeStyles({
         alignItems: 'center',
     },
     titleAdjust: {
-        marginBottom: 0
-    }
+        marginBottom: 0,
+        color: '#3e3e30'
+    },
+    brAdjust: {
+        display: 'inline-block'
+    },
 });
 
 const CustomAlert: React.FC<CustomAlertProps> = (props) => {
     const {status, title, isOpen, setIsOpen} = props
 
     const classes = useStyles();
+    console.log(title)
 
     return (
         <div>
@@ -53,7 +58,15 @@ const CustomAlert: React.FC<CustomAlertProps> = (props) => {
                         <CloseIcon fontSize="inherit" />
                     </IconButton>
                 }>
-                <AlertTitle className={classes.titleAdjust}>{title}</AlertTitle>
+                <AlertTitle className={classes.titleAdjust}>
+                    {title.map(titleItem => {
+                        return (
+                            <span className={classes.brAdjust}>
+                                {titleItem}
+                            </span>
+                        )
+                    })}
+                </AlertTitle>
                 </Alert>
             </Collapse>
         </div>
