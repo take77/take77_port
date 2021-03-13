@@ -13,7 +13,7 @@ const Notice = () => {
         return (
             <CustomAlert
                 status='success'
-                title='お問い合わせを受け付けました'
+                title={['お問い合わせを', '受け付けました']}
                 isOpen={successIsOpen}
                 setIsOpen={setSuccessIsOpen}
             />
@@ -24,7 +24,7 @@ const Notice = () => {
         return (
             <CustomAlert
                 status='error'
-                title='入力内容をご確認ください'
+                title={['入力内容を', 'ご確認ください']}
                 isOpen={errorIsOpen}
                 setIsOpen={setErrorIsOpen}
             />

@@ -83,7 +83,7 @@ const Form = () => {
                     setFieldState={setContent}
                     isCorrect={contentIsCorrect}
                     setIsCorrect={setContentIsCorrect}
-                    rows={8}
+                    rows={6}
                 />
                 { (email !== '' && emailIsCorrect && content !== '' &&contentIsCorrect) ?
                     <Button

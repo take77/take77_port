@@ -113,16 +113,16 @@ const MenuDrawer: React.FC<MenuDrawerProps> = ({ pathname }) => {
                     </Link>
                 }
                 <ListItem>
-                    <IconButton>
+                    <IconButton href='https://twitter.com/take77_main'>
                         <TwitterIcon fontSize='inherit' />
                     </IconButton>
-                    <IconButton>
+                    <IconButton href='https://www.facebook.com/profile.php?id=100009816691963'>
                         <FacebookIcon fontSize='inherit' />
                     </IconButton>
-                    <IconButton>
+                    <IconButton href='https://note.com/take77_note'>
                         <InsertDriveFileOutlinedIcon fontSize='inherit' />
                     </IconButton>
-                    <IconButton>
+                    <IconButton href='https://github.com/take77'>
                         <GitHubIcon fontSize='inherit' />
                     </IconButton>
                 </ListItem>

@@ -3,7 +3,7 @@ import {useStaticQuery, graphql} from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 type PropsType = {
-  fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Graphic.jpg' | 'Service.jpg'| 'Other.jpg';
+  fileName: 'Contact.jpg' | 'Develop.jpg' | 'Hobby.jpg' | 'Graphic.jpg' | 'Service.jpg'| 'Other.jpg' | '404.jpg';
   alt: string;
   styles?: string;
 }

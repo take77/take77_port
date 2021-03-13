@@ -5,7 +5,8 @@ let theme = createMuiTheme({
         primary: {
             light: '#ffffff',
             main: '#d4d4d4',
-            dark: '#a3a3a3'
+            dark: '#a3a3a3',
+            contrastText: '#3e3e30',
         },
         secondary: {
             light: '#90e1ad',
@@ -15,7 +16,8 @@ let theme = createMuiTheme({
         success: {
             light: '#ffffff',
             main: '#d4d4d4',
-            dark: '#a3a3a3'
+            dark: '#a3a3a3',
+            contrastText: '#3e3e30',
         },
         error: {
             light: '#90e1ad',
