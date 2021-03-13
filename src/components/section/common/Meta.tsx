@@ -39,12 +39,13 @@ const Meta: React.FC<MetaPropsType> = ({title, description, OgImage, top, post})
             <meta property='og:site_name' content="take77's port" />
             <meta property='og:title' content={title} />
             {/* fixMe: fix path after deploy */}
-            <meta property='og:image' content={post ? `http:${OgImage}` : `http:${image.childImageSharp.fluid.src}`} />
+            <meta property='og:image' content={post ? `http:${OgImage}` : `https://take77s-port.netlify.app${image.childImageSharp.fluid.src}`} />
             <meta property='og:description' content={description} />
             <meta property='og:type' content='website' />
             <meta name='twitter:card' content='summary_large_image' />
             <meta name='tiwitter:title' content={`${title} | take77's port`} />
             <meta name='twitter:description' content={description} />
+            <meta name="google-site-verification" content={process.env.GATSBY_GOOGLE_SITE_VERIFICATION_KEY} />
         </Helmet>
     )
 };

@@ -8,6 +8,9 @@ const path = require('path');
 module.exports = {
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
   // don't need to define it here (just if you need to change the options)
+  siteMetadata: {
+    siteUrl: `https://take77s-port.netlify.app/`,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,6 +30,7 @@ module.exports = {
         spaceId: process.env.SPACE_ID,
         accessToken: process.env.DELIVERY_ACCESS_TOKEN,
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
   ],
 };
