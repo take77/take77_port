@@ -68,7 +68,6 @@ const CommonPostTemplate = ({ pageContext }) => {
     const { post } = pageContext;
     const eyeCatch = getImage(post.eyeCatch);
     const classes = useStyles();
-    console.log(post)
 
     return (
         <Layout pathname=''>

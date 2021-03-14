@@ -38,7 +38,6 @@ const CustomAlert: React.FC<CustomAlertProps> = (props) => {
     const {status, title, isOpen, setIsOpen} = props
 
     const classes = useStyles();
-    console.log(title)
 
     return (
         <div>
