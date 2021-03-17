@@ -12,13 +12,14 @@ import CommonTemplateH1 from '@/components/basic/title/CommonTemplateH1';
 import CommonTemplateH2 from '@/components/basic/title/CommonTemplateH2';
 import CommonTemplateH3 from '@/components/basic/title/CommonTemplateH3';
 import CommonTemplateParagraph from '@/components/basic/paragraph/CommonTemplateParagraph';
-import CommonTemplateCode from '@/components/basic/paragraph/CommonTemplateCode';
+import CommonTemplateCode from '@/components/basic/inline/CommonTemplateCode';
 import CommonTemplateQuote from '@/components/basic/paragraph/CommonTemplateQuote';
 import CommonTemplateUl from '@/components/basic/list/CommonTemplateUl';
 import CommonTemplateOl from '@/components/basic/list/CommonTemplateOl';
 import CommonEntryCard from '@/components/parts/CommonEntryCard';
 import CommonArticleInfo from '@/components/parts/CommonArticleInfo';
 import Meta from '@/components/section/common/Meta';
+import CommonTemplateCodeBlock from '@/components/basic/paragraph/CommonTemplateCodeBlock';
 
 const useStyles = makeStyles({
     eyeCatchStyles: {
@@ -34,7 +35,19 @@ const useStyles = makeStyles({
 
 const options = {
     renderNode: {
-        [BLOCKS.PARAGRAPH]: ( node, children ) => <CommonTemplateParagraph content={ children } />,
+        [BLOCKS.PARAGRAPH]: ( node, children ) => {
+            console.log(node);
+            console.log(children);
+            if ( String(children[0]).includes('<Code Block>')) {
+                return (
+                    <CommonTemplateCodeBlock content={children} />
+                )
+            } else {
+                return (
+                    <CommonTemplateParagraph content={ children } />
+                )
+            };
+        },
         [BLOCKS.HEADING_1]: ( node, children ) => <CommonTemplateH1 content={ children } />,
         [BLOCKS.HEADING_2]: ( node, children ) => <CommonTemplateH2 content={ children } />,
         [BLOCKS.HEADING_3]: ( node, children ) => <CommonTemplateH3 content={ children } />,
