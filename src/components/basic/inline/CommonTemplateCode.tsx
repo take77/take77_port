@@ -1,5 +1,3 @@
-// code is inline item... so, here is too bad to put in...
-
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core';

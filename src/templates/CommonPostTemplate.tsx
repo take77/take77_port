@@ -36,8 +36,6 @@ const useStyles = makeStyles({
 const options = {
     renderNode: {
         [BLOCKS.PARAGRAPH]: ( node, children ) => {
-            console.log(node);
-            console.log(children);
             if ( String(children[0]).includes('<Code Block>')) {
                 return (
                     <CommonTemplateCodeBlock content={children} />
