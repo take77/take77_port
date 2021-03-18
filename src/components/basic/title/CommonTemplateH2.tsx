@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     heddingStyles: {
         position: 'relative',
         padding: '0 .25em .25em 2.4em',
-        margin: '.75em auto',
+        margin: '2.4em auto .75em',
         borderBottom: '1px solid rgba(255, 255, 255, .6)',
         '&:before': {
             position: 'absolute',

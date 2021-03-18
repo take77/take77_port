@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     paragraphStyles: {
-        margin: '.5em auto',
+        margin: '.75em auto',
     }
 });
 

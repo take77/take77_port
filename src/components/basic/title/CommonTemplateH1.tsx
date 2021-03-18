@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     heddingStyles: {
-        margin: '.75em auto',
+        margin: '3em auto .75em',
     }
 })
 

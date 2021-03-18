@@ -12,9 +12,9 @@ const CommonTemplateOl = ({ content }) => {
     const classes = useStyles();
 
     return (
-        <ul className={classes.listStyle}>
+        <ol className={classes.listStyle}>
             { content }
-        </ul>
+        </ol>
     );
 };
 
