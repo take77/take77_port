@@ -90,7 +90,7 @@ theme.typography.h1 = {
     fontFamily: '"jost", "Stick", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
-    lineHeight: 2,
+    lineHeight: 2.4,
     [theme.breakpoints.up('sm')]: {
         fontSize: '1.8em'
     },
@@ -105,7 +105,7 @@ theme.typography.h2 = {
     fontFamily: '"jost", "Stick", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
-    lineHeight: 2,
+    lineHeight: 2.4,
     [theme.breakpoints.up('sm')]: {
         fontSize: '1.5em'
     },
@@ -120,7 +120,7 @@ theme.typography.h3 = {
     fontFamily: '"jost", "Stick", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
-    lineHeight: 2,
+    lineHeight: 2.4,
     [theme.breakpoints.up('sm')]: {
         fontSize: '1.3em'
     },
@@ -135,7 +135,7 @@ theme.typography.h4 = {
     fontFamily: '"jost", "Stick", sans-serif',
     fontWeight: 300,
     letterSpacing: '.3em',
-    lineHeight: 2,
+    lineHeight: 2.4,
     [theme.breakpoints.up('sm')]: {
         fontSize: '1.15em'
     },
@@ -145,7 +145,7 @@ theme.typography.h4 = {
 }
 
 theme.typography.body1 = {
-    lineHeight: 2.4,
+    lineHeight: 3.6,
     fontSize: 16,
     color: '#ffffff',
     fontFamily: '"jost", "Stick", sans-serif',
@@ -159,7 +159,7 @@ theme.typography.body1 = {
 }
 
 theme.typography.body2 = {
-    lineHeight: 2,
+    lineHeight: 3.6,
     fontSize: 16,
     color: '#ffffff',
     letterSpacing: '.2em',

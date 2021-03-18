@@ -31,6 +31,7 @@ module.exports = {
         accessToken: process.env.DELIVERY_ACCESS_TOKEN,
       }
     },
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-lodash`
   ],
 };
