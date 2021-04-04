@@ -9,7 +9,7 @@ module.exports = {
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
   // don't need to define it here (just if you need to change the options)
   siteMetadata: {
-    siteUrl: `https://take77s-port.netlify.app/`,
+    siteUrl: `https://take77-port.com/`,
   },
   plugins: [
     {
